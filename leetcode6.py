@@ -37,3 +37,32 @@ s consists of English letters (lower-case and upper-case), ',' and '.'.
 1 <= numRows <= 1000
 """
 
+class Solution:
+    def convert(self, s: str, numRows: int) -> str:
+        n = len(s)
+
+        output = ""
+
+        if numRows == 1 or n <= numRows:
+            return s
+
+        output = [""]*numRows
+
+        num_dia_letter = numRows - 2
+        num_letter_grp = numRows + num_dia_letter
+        pos = 0
+        
+        for i in range(n):
+            if pos == num_letter_grp:
+                pos = 0
+    
+            if pos >= numRows:
+                row = num_letter_grp - pos
+            else:
+                row = pos
+            
+            output[row] += s[i]
+
+            pos = pos+1
+        
+        return "".join(output) #thx grok
