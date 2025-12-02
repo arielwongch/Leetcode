@@ -14,11 +14,8 @@ rng = np.random.default_rng()
 prob = rng.standard_normal(49)
 
 #normalize then make the sum of all prob to 1
-mean_prob = np.mean(prob)
-sd_prob = np.std(prob)
-norm_prob = (prob - mean_prob)/sd_prob
-norm_prob = norm_prob - min(norm_prob)
-norm_prob = norm_prob/ sum(norm_prob)
+norm_prob = prob/ sum(prob)
+print(norm_prob)
 
 #generate marksix result
 for _ in range(num_iterations):
