@@ -2,7 +2,7 @@ import numpy as np
 from sklearn.preprocessing import normalize
 
 #change number of iterations
-num_iterations = 10
+num_iterations = 3
 
 #balls range from 1 to 49
 all_balls = np.arange(1, 50, dtype=int)
