@@ -3,7 +3,7 @@
 """
 
 class Solution:
-    def maxArea(self, height: List[int]) -> int:
+    def maxArea(self, height: list[int]) -> int:
 
         n = len(height)
         
